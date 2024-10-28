@@ -1,0 +1,3 @@
+[submodule "FOS.Identity.Server/fos-models"]
+	path = FOS.Identity.Server/fos-models
+	url = https://github.com/SrivasiniInfotech-2011/fos-models.git
