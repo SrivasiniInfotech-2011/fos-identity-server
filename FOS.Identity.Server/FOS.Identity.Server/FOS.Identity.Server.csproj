@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\fos-infrastructure\FOS.Infrastructure\FOS.Infrastructure\FOS.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\fos-infrastructure\FOS.Infrastructure\FOS.Infrastructure\FOS.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
