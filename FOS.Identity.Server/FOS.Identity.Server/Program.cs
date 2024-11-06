@@ -1,4 +1,4 @@
-using AMS.API.Authenticator.Configurations;
+using FOS.Identity.Server.Configurations;
 using Serilog;
 using System.Security.Cryptography.X509Certificates;
 
