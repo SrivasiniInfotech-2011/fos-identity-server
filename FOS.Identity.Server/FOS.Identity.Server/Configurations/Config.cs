@@ -1,7 +1,7 @@
 ﻿using FOS.Models.Constants;
 using IdentityServer4;
 using IdentityServer4.Models;
-namespace AMS.API.Authenticator.Configurations
+namespace FOS.Identity.Server.Configurations
 {
     public class Config
     {
@@ -19,7 +19,17 @@ namespace AMS.API.Authenticator.Configurations
         {
             return new List<ApiResource>
             {
-                new ApiResource(Constants.ApiResource.DataEventRecordsApi,Constants.ApiResource.ApiResouceDisplayName,new List<string> { Constants.UserClaim.Role, Constants.UserClaim.Admin, Constants.UserClaim.User, Constants.UserClaim.DataEventRecords, Constants.UserClaim.AdminDataEventRecords, Constants.UserClaim.UserAdminEventRecords  })
+                new ApiResource(
+                                Constants.ApiResource.UserApi,
+                                Constants.ApiResource.UserApiResouceDisplayName,
+                                new List<string> {
+                                                    Constants.UserClaim.Role,
+                                                    Constants.UserClaim.Admin,
+                                                    Constants.UserClaim.User,
+                                                    Constants.UserClaim.DataEventRecords,
+                                                    Constants.UserClaim.AdminDataEventRecords,
+                                                    Constants.UserClaim.UserAdminEventRecords
+                                                 })
                 {
                     ApiSecrets =
                     {
@@ -28,7 +38,7 @@ namespace AMS.API.Authenticator.Configurations
                     Scopes =
                     {
                         //"dataEventRecordsScope",
-                        Constants.ApiResource.DataEventRecordScope,
+                        Constants.ApiResource.UserApiScope,
                     }
                 }
             };
@@ -43,7 +53,7 @@ namespace AMS.API.Authenticator.Configurations
                     //Name = Constants.APP_SCOPE,
                     //DisplayName = Constants.UserClaim.ScopeDisplayName,
                     //UserClaims = { Constants.UserClaim.Role, Constants.UserClaim.Admin, Constants.UserClaim.User, Constants.UserClaim.DataEventRecords, Constants.UserClaim.AdminDataEventRecords, Constants.UserClaim.UserAdminEventRecords }
-                    Name =Constants.ApiResource.DataEventRecordScope,
+                    Name =Constants.ApiResource.UserApiScope,
                     DisplayName = Constants.UserClaim.ScopeDisplayName,
                     UserClaims = { Constants.UserClaim.Role, Constants.UserClaim.Admin, Constants.UserClaim.User, Constants.UserClaim.DataEventRecords, Constants.UserClaim.AdminDataEventRecords, Constants.UserClaim.UserAdminEventRecords }
                 }
@@ -76,8 +86,7 @@ namespace AMS.API.Authenticator.Configurations
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
-                        Constants.ApiResource.DataEventRecordScope
-                        //"dataEventRecordsScope"
+                        Constants.ApiResource.UserApiScope
                     }
                 }
             };
