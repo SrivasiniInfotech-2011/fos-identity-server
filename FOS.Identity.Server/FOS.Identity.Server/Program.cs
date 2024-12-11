@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Adding the Certificate
 var environment = builder.Environment.ContentRootPath ?? builder.Environment.WebRootPath;
-X509Certificate2 cert = new X509Certificate2(Path.Combine(environment, "damienbodserver.pfx"), "");
+X509Certificate2 cert = new X509Certificate2(Path.Combine(environment, "fosServerCertificate.pfx"), "Fos@123");
 
 // Add services to the container.
 
